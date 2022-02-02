@@ -1,0 +1,213 @@
+<ion-header>
+  <div class="head_list">
+    <div class="best_swagger" *ngFor="let blog of tab_slide ; let i=index">
+      <img src="{{blog.image}}" />
+      <ion-label>{{blog.nom}}</ion-label>
+    </div>
+  </div>
+</ion-header>
+
+<ion-content>
+
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed" >
+    <ion-fab-button>
+      <!-- (click)="menu()" -->
+      <ng-lottie style="width: 40%;" [options]="menu_lottie"></ng-lottie>
+    </ion-fab-button>
+  </ion-fab>
+
+  <!-- <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="deconnecter()">
+    <ion-fab-button>
+      <ion-icon name="log-out"  style="font-size: 25px;color: #cb1616;" ></ion-icon>
+    </ion-fab-button>
+  </ion-fab> -->
+
+  <div style="height: 100%;margin:auto;width: 100%;background-color:#311409;">
+
+
+    
+    <swiper class="swiper" 
+      [autoplay]="false"
+      [keyboard]="true"
+      [pagination]="true"
+      [scrollbar]="true"
+      [zoom]="true"
+      [slidesPerView]="1"
+      >
+      <ng-template  swiperSlide *ngFor="let blog of tab_slide ; let i=index">
+        <div  class="slide" >
+          <div class="client_profil">
+            
+          </div>
+          
+          <div class="reaction">
+            <div class="like">
+              <ion-icon name="happy"></ion-icon>
+              <!-- <ion-icon name="heart-half-outline"></ion-icon> -->
+            </div>
+            
+            <div class="share">
+              <!-- <ion-icon name="arrow-redo-outline"></ion-icon> -->
+              <ion-icon name="navigate-circle"></ion-icon>
+            </div>
+  
+            <div class="comment">
+              <ion-icon name="chatbubbles"></ion-icon>
+            </div>
+          </div>
+          
+
+          <img class="poste"  src={{blog.image}} />
+          <!-- 
+            [style]="{'background-image':'url('+blog.image+')'}">
+            
+          </div> -->
+
+          <!-- <div class="text_div">
+            {{blog.text}}
+          </div> -->
+        </div>
+      </ng-template>     
+      <!-- <ng-template  swiperSlide>
+        <div  class="slide" >
+          <div class="client_profil">
+            
+          </div>
+          
+          <div class="poste" [style]="{'background-image':'url('+tab_slide[1].image+')'}">
+            <div class="like">
+            
+            </div>
+            <div class="comment">
+              
+            </div>
+            <div class="share">
+              
+            </div>
+          </div>
+          <div class="text_div">
+            {{tab_slide[1].text}}
+          </div>
+        </div>
+      </ng-template>     
+      <ng-template  swiperSlide>
+        <div  class="slide" >
+          <div class="client_profil">
+            
+          </div>
+          
+          <div class="poste" [style]="{'background-image':'url('+tab_slide[2].image+')'}">
+            <div class="like">
+            
+            </div>
+            <div class="comment">
+              
+            </div>
+            <div class="share">
+              
+            </div>
+          </div>
+          <div class="text_div">
+            {{tab_slide[2].text}}
+          </div>
+        </div>
+      </ng-template>     
+      <ng-template  swiperSlide>
+        <div  class="slide" >
+          <div class="client_profil">
+            
+          </div>
+          
+          <div class="poste" [style]="{'background-image':'url('+tab_slide[3].image+')'}">
+            <div class="like">
+            
+            </div>
+            <div class="comment">
+              
+            </div>
+            <div class="share">
+              
+            </div>
+          </div>
+          <div class="text_div">
+            {{tab_slide[3].text}}
+          </div>
+        </div>
+      </ng-template>     
+      <ng-template  swiperSlide>
+        <div  class="slide" >
+          <div class="client_profil">
+            
+          </div>
+          
+          <div class="poste" [style]="{'background-image':'url('+tab_slide[4].image+')'}">
+            <div class="like">
+            
+            </div>
+            <div class="comment">
+              
+            </div>
+            <div class="share">
+              
+            </div>
+          </div>
+          <div class="text_div">
+            {{tab_slide[4].text}}
+          </div>
+        </div>
+      </ng-template>      -->
+    </swiper>
+  </div>
+</ion-content>
+
+
+<!-- 
+
+
+<swiper class="swiper"
+      [autoplay]="true"
+      [keyboard]="true"
+      [pagination]="true"
+      [scrollbar]="true"
+      [zoom]="true"
+      [slidesPerView]="1"
+      [loop]="true"
+      
+      >
+      <ng-template  swiperSlide style="height: 100%;">
+        <div [style]="{'background-image':'url('+tab_slide[0].image+')'}" class="slide" >
+          <div class="text_div">
+            {{tab_slide[0].text}}
+          </div>
+        </div>
+      </ng-template>
+      <ng-template swiperSlide style="height: 100%;">
+        <div [style]="{'background-image':'url('+tab_slide[1].image+')'}" class="slide">
+          <div class="text_div">
+            {{tab_slide[1].text}}
+          </div>        
+        </div>
+      </ng-template>
+      <ng-template swiperSlide style="height: 100%;">
+        <div [style]="{'background-image':'url('+tab_slide[2].image+')'}" class="slide">
+          <div class="text_div">
+            {{tab_slide[2].text}}
+          </div>        
+        </div>
+      </ng-template>
+      <ng-template swiperSlide style="height: 100%;">
+        <div [style]="{'background-image':'url('+tab_slide[3].image+')'}" class="slide">
+          <div class="text_div">
+            {{tab_slide[3].text}}
+          </div>        
+        </div>
+      </ng-template>
+      <ng-template swiperSlide style="height: 100%;">
+        <div [style]="{'background-image':'url('+tab_slide[4].image+')'}" class="slide">
+          <div class="text_div">
+            {{tab_slide[4].text}}
+          </div>        
+        </div>
+      </ng-template>
+    </swiper>
+ -->

@@ -7,13 +7,18 @@ import { IonicModule } from '@ionic/angular';
 import { FirstPageRoutingModule } from './first-routing.module';
 
 import { FirstPage } from './first.page';
+import { LottieModule } from 'ngx-lottie';
+export function playerFactory() {
+  return import('lottie-web');
+}
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    FirstPageRoutingModule
+    FirstPageRoutingModule,
+    LottieModule.forRoot({player:playerFactory}),
   ],
   declarations: [FirstPage]
 })

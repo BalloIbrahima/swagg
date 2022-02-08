@@ -1,9 +1,35 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>first</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content>
+<ion-content >
+  <!-- <ng-lottie style="width: 100%;" [options]="swg"></ng-lottie> -->
+  <div class="container_first" [style]="{'background-image':'url('+bac+')'}">
 
+    <div class="btns">
+      <ion-button expand="block" color="medium" (click)="login()" [routerLink]="['/login']">
+        <!-- <ion-icon name="log-in-outline"></ion-icon> -->
+        Login</ion-button>
+      <ion-button expand="block" color="success" (click)="continiue()">Continue</ion-button>
+      <ion-button  expand="block" (click)="registration()" [routerLink]="['/register']">
+        <!-- <ion-icon name="reader-outline"></ion-icon> -->
+        Registration</ion-button>
+    </div>
+    
+    <ion-label expand="block" color="medium" class="text_log_wif" >Or Login with</ion-label>
+
+    <div class="log_wif">
+      <!-- <ion-button  expand="block" > -->
+        <ion-icon name="logo-tiktok" (click)="tiktok()"></ion-icon>
+        <ion-icon name="logo-snapchat" (click)="snapchat()"></ion-icon>
+        <ion-icon name="logo-instagram" (click)="instagram()"></ion-icon>
+        <ion-icon name="logo-facebook" (click)="facebook()"></ion-icon>
+        <ion-icon name="logo-google" (click)="google()"></ion-icon>
+
+      <!-- </ion-button> -->
+    </div>
+
+  </div>
 </ion-content>

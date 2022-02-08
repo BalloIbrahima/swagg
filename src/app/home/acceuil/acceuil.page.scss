@@ -85,13 +85,19 @@ ng-template{
     width: 50px;
     border-radius: 50%;
     background-color: bisque;
+    padding: 2%;
 }
 
+.client_profil ion-icon{
+    height: 100%;
+    width: 100%;
+}
 .reaction{
     position: absolute;
     right: 1%;
     top: 45%;
     background-color: #00000061;
+    border-radius: 5px;
 }
 
 .like{
@@ -113,7 +119,6 @@ ng-template{
 }
 
 .share{
-    
     height: 30px;
     width: 30px;
     border-radius: 50%;

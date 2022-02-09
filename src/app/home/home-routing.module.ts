@@ -20,6 +20,10 @@ const routes: Routes = [
         loadChildren: () => import('./swagg-video/swagg-video.module').then( m => m.SwaggVideoPageModule)
       },
       {
+        path: 'my-compte',
+        loadChildren: () => import('../my-compte/my-compte.module').then( m => m.MyComptePageModule)
+      },
+      {
         path: '',
         redirectTo: '/home/acceuil',
         pathMatch: 'full'

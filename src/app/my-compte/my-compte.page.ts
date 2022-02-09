@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+// import * as firebase from 'firebase/compat';
 
 @Component({
   selector: 'app-my-compte',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyComptePage implements OnInit {
 
-  constructor() { }
+  user = null;
 
-  ngOnInit() {
+  constructor(public fireAuth: AngularFireAuth) {
+    this.fireAuth.authState.subscribe((user) => {
+      this.user = user ? user : null;
+    });
   }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
+
+  // login() {
+  //   this.fireAuth.signInWithPopup(new firebase.default.auth.GoogleAuthProvider());
+  // }
+
+  // logout() {
+  //   this.fireAuth.signOut();
+  // }
 
 }

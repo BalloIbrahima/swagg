@@ -1,0 +1,6 @@
+{
+	"appId": "ib.swagg.ballo",
+	"appName": "swagg",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

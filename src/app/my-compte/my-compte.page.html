@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>my_compte</ion-title>
   </ion-toolbar>
@@ -6,4 +6,24 @@
 
 <ion-content>
 
+</ion-content> -->
+<ion-content>
+  <form *ngIf="!user">
+    <ion-row>
+      <ion-col> 
+        <ion-button type="submit" color="success" (click)="login()" expand="block">Login with Google</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+  <ion-card *ngIf="user">
+    <ion-img [src]="user.photoURL"></ion-img>
+    <ion-card-header>
+      <ion-card-subtitle>{{user.email}}</ion-card-subtitle>
+      <ion-card-title>{{user.displayName}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button (click)="logout()" expand="block" color="danger">Logout</ion-button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

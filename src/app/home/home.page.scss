@@ -25,3 +25,26 @@
 #container a {
   text-decoration: none;
 }
+
+ion-tab-bar{
+   
+  bottom: 2%;
+  position: absolute;
+  width: 96%;
+  background: #3880ff00;
+  justify-content: center;
+  border-radius: 5px;
+  margin: 2%;
+  display: inline-flex;
+}
+
+ion-tab-button{
+  background-color:#311409;;
+}
+
+ion-tab-button ion-icon{
+  
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}

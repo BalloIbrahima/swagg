@@ -20,10 +20,7 @@ const routes: Routes = [
   //   redirectTo: 'home',
   //   pathMatch: 'full'
   // },
-  {
-    path: 'my-compte',
-    loadChildren: () => import('./my-compte/my-compte.module').then( m => m.MyComptePageModule)
-  },
+  
   {
     path: 'first',
     loadChildren: () => import('./first/first.module').then( m => m.FirstPageModule)
